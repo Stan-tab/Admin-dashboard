@@ -78,7 +78,8 @@ li img {
     padding-left: 2rem;
 }
 
-.yaLoh > .Loh > p{
+.yaLoh > .Loh > p, 
+.trending > p{
     font-weight: bold;
     font-size: 1.5rem;
     padding-top: 0.3rem;
@@ -115,16 +116,20 @@ li img {
     padding-top: 0.7rem;
 } */
 
-.card {
+.mainbar .card{
+    overflow: auto;
+    border-left: 10px solid rgb(211, 197, 9);
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    padding: 1.5vh 0.2vw 0.1vh 2rem;
     height: 250px;
+}
+
+.card {
     background-color: white;
     border-radius: 10px;
-    border-left: 10px solid rgb(211, 197, 9);
     box-shadow: 2px 3px rgba(0, 0, 0, 0.3);
-    display: grid;
     max-width: 550px;
-    grid-template-rows: 3fr 1fr;
-    padding-left: 2rem;
 }
 
 .card .text p:first-child{
@@ -168,12 +173,53 @@ li img {
 
 .sidebar{
     flex: 1.5;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    padding: 0 1rem 0 2rem;
+}
+
+.announcements{
+    flex: 1;
+    display: block;
+    border: none;
+    padding: 1.5vw 2vw;
+}
+
+hr{
+    margin-top: 1rem;
+}
+
+.announcements p {
+    margin: 0.1rem 0.5rem 0rem 0.5rem;
+    font-size: 1.2rem;
+    max-width: 15vw;
+    max-height: 6vh;
+    overflow: hidden;
+}
+
+.announcements >div p+p{
+    font-size: 0.9rem;
+    margin: 0 0.5rem;
+    color: rgb(123, 124, 117);
+}
+
+.trending {
+    flex: 1.2;
+}
+
+.trending .card{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5vw 0 1.5vw 2vw;
 }
 
 .topnav {
     display: flex;
     flex-direction: column;
     padding-left: 3rem;
+    box-shadow: 2px 3px green;
 }
 
 input {
@@ -213,10 +259,25 @@ input {
     font-size: 1.5rem;
 }
 
-.first div img + img {
+.first div img + img ,
+.prof img{
     border-radius: 100%;
     height: 3.5rem;
     width: 3.5rem;
+}
+
+.prof {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.info > p{
+    margin: 0;
+}
+
+.info > p+p{
+    color: rgb(123, 124, 117);
 }
 
 .second {
